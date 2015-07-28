@@ -1,9 +1,20 @@
+body {
+  //background-image: url('../images/grey-bg.png');
+  background-repeat: repeat;
+}
+
 .instaPhoto {
   img {
     float: left;
     width: 47%;
     margin: 4px;
   }
+   .overlay {
+    position: relative;
+    background: url("../images/instagram-border.png") no-repeat center;
+    background-size: cover;
+  }
+
 }
 
 #insta-wrap {

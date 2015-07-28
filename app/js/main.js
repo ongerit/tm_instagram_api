@@ -9,7 +9,7 @@ $(document).ready(function() {
     accessToken: '2105340433.467ede5.54c303b775a4408fb89393b131c928eb',
     limit: 10,
     links: false,
-    template: '<div class="instaPhoto"> <img class = "main-image" src="{{image}}" /></div>',
+    template: '<div class="instaPhoto"> <img class="main-image overlay" src="{{image}}" /></div>',
 
     resolution: 'standard_resolution',
   });

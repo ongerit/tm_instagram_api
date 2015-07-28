@@ -1,11 +1,22 @@
-/* line 2, ../sass/main.scss */
+/* line 1, ../sass/main.scss */
+body {
+  background-repeat: repeat;
+}
+
+/* line 7, ../sass/main.scss */
 .instaPhoto img {
   float: left;
   width: 47%;
   margin: 4px;
 }
+/* line 12, ../sass/main.scss */
+.instaPhoto .overlay {
+  position: relative;
+  background: url("../images/instagram-border.png") no-repeat center;
+  background-size: cover;
+}
 
-/* line 9, ../sass/main.scss */
+/* line 20, ../sass/main.scss */
 #insta-wrap {
   width: 500px;
   margin: 0 auto;
