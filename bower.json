@@ -1,7 +1,14 @@
 {
   "name": "tm-instgram-feed",
-  "private": true,
-  "dependencies": {
-    "bootstrap": "~3.2.0"
-  }
+	"main": "instafeed.js",
+  "description": "Using instagram.js for TM's Promotional page",
+  "version": ".01",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:ongerit/tm_instagram_api.git"
+  },
+  "keywords": [
+    "javascript",
+    "instagram"
+  ]
 }

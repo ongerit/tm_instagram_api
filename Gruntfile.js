@@ -24,6 +24,26 @@ module.exports = function (grunt) {
 
   // Define the configuration for all the tasks
   grunt.initConfig({
+		
+		
+		//Config to run compass on project
+		pkg: grunt.file.readJSON('package.json'),
+		compass: {
+					dist: {
+						options: {
+							sassDir: 'app/sass',
+							cssDir: 'app/css'
+						}
+					}
+				},
+				// watch: {
+				// 			css: {
+				// 				files: '**/*.scss',
+				// 				tasks: ['compass']
+				// 			}
+				// 		},
+	
+		//END of Config for compass
 
     // Project settings
     config: config,
@@ -32,7 +52,11 @@ module.exports = function (grunt) {
     watch: {
       bower: {
         files: ['bower.json'],
-        tasks: ['wiredep']
+        tasks: ['wiredep'],
+              css: {
+                  files: 'app/sass/*.scss',
+                  tasks: ['compass']
+               }
       },
       js: {
         files: ['<%= config.app %>/scripts/{,*/}*.js'],
@@ -328,6 +352,11 @@ module.exports = function (grunt) {
     }
   });
 
+
+
+		grunt.loadNpmTasks('grunt-contrib-compass');
+		grunt.loadNpmTasks('grunt-contrib-watch');
+		grunt.registerTask('default',['watch']);
 
   grunt.registerTask('serve', 'start the server and preview your app, --allow-remote for remote access', function (target) {
     if (grunt.option('allow-remote')) {
