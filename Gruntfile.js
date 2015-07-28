@@ -54,7 +54,7 @@ module.exports = function (grunt) {
         files: ['bower.json'],
         tasks: ['wiredep'],
               css: {
-                  files: 'app/sass/*.scss',
+                  files: '<%= config.app %>/sass/*.scss',
                   tasks: ['compass']
                }
       },
